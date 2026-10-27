@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --background: #101113;
+  --surface: #191b1f;
+  --surface-light: #22252a;
+  --text: #f3f1ed;
+  --muted: #999b9f;
+  --accent: #c8f36b;
+  --border: rgba(255, 255, 255, .1);
+}
+
+* { box-sizing: border-box; }
+body { background: var(--background); color: var(--text); font-family: 'DM Sans', sans-serif; margin: 0; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.screen { align-items: center; display: flex; justify-content: center; min-height: 100vh; padding: 28px 5vw; }
+.card { background: radial-gradient(circle at 85% 0%, rgba(200, 243, 107, .1), transparent 35%), var(--surface); border: 1px solid var(--border); border-radius: 18px; max-width: 650px; padding: 44px; width: 100%; }
+.brand { align-items: center; color: var(--text); display: inline-flex; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; gap: 9px; text-decoration: none; }
+.brand-mark { align-items: center; background: var(--accent); border-radius: 8px; color: #101113; display: flex; height: 31px; justify-content: center; width: 31px; }
+.eyebrow { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; margin: 40px 0 18px; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+h1 { font-size: clamp(42px, 7vw, 68px); letter-spacing: -3px; line-height: .98; margin: 0; }
+h1 span { color: var(--accent); }
+.muted { color: var(--muted); line-height: 1.7; }
+.role-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 28px; }
+.role-card { background: var(--surface-light); border: 1px solid var(--border); border-radius: 10px; color: var(--text); padding: 18px; text-align: left; }
+.role-card.active, .role-card:hover { border-color: var(--accent); }
+.role-card strong, .role-card small { display: block; }
+.role-card small { color: var(--muted); margin-top: 5px; }
+.form { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 22px; }
+.form label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.form input, .form select { background: var(--background); border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 13px; width: 100%; }
+.button { background: var(--accent); border: 0; border-radius: 7px; color: #101113; font-weight: 700; padding: 13px 18px; }
+.form .button { margin-top: 14px; width: 100%; }
+.error { color: #ff9a8b; font-size: 12px; min-height: 16px; }
+.auction-page { margin: auto; max-width: 900px; padding: 24px 5vw; }
+.topbar { align-items: center; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; padding-bottom: 18px; }
+.purse { color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+.auction-card, .chat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-top: 24px; padding: 18px; }
+.auction-card { align-items: center; display: grid; gap: 18px; grid-template-columns: 1fr auto auto; }
+.player-label { color: var(--accent); font-size: 11px; letter-spacing: 1px; }
+.player-name { font-size: 22px; margin: 6px 0; }
+.timer { border-left: 1px solid var(--border); border-right: 1px solid var(--border); color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 34px; padding: 8px 25px; text-align: center; }
+.bid-actions { display: flex; gap: 6px; }
+.bid-actions .button { padding: 10px 12px; }
+.bid-actions .button:disabled { background: #555b50; color: #b7b9b1; cursor: not-allowed; }
+.sold { background: #075326; border: 1px solid #0bd16d; border-radius: 10px; margin-top: 24px; padding: 18px; text-align: center; }
+.sold strong { color: #00e875; display: block; font: 700 36px 'Space Grotesk', sans-serif; }
+.unsold { background: #3a3020; border: 1px solid #d5a74a; border-radius: 10px; color: #f0d18a; margin-top: 24px; padding: 18px; text-align: center; }
+.unsold strong { display: block; font: 700 36px 'Space Grotesk', sans-serif; }
+.host-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.host-actions button { background: var(--surface-light); border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 9px 12px; }
+.chat-messages { display: flex; flex-direction: column; gap: 8px; max-height: 220px; overflow: auto; }
+.message { background: var(--surface-light); border-radius: 6px; margin: 0; padding: 9px 11px; }
+.message strong { color: var(--accent); margin-right: 7px; }
+.chat-form { display: flex; gap: 8px; margin-top: 14px; }
+.chat-form input { background: var(--background); border: 1px solid var(--border); border-radius: 6px; color: var(--text); min-width: 0; padding: 11px; width: 100%; }
+@media (max-width: 700px) { .card { padding: 30px 22px; } .role-grid, .auction-card { grid-template-columns: 1fr; } .timer { border: 0; border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); } .chat-form { flex-direction: column; } }

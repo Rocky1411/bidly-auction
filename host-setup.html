@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bidly | Host Setup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="entry-screen">
+    <section class="entry-card setup-page-card">
+      <a class="brand entry-brand" href="index.html">
+        <span class="brand-mark">B</span><span>bidly</span>
+      </a>
+      <p class="eyebrow">HOST SETUP</p>
+      <h1>Prepare the<br><span>auction room.</span></h1>
+      <p class="entry-description">Choose how many players will be auctioned. Only the first host can set this number, and the maximum is 30.</p>
+      <form id="host-setup-form" class="join-form">
+        <label for="host-player-count">Number of players</label>
+        <select id="host-player-count" class="large-select"></select>
+        <button class="primary-button setup-submit" type="submit">Continue to auction <span>→</span></button>
+        <p class="join-error" id="host-setup-error" role="alert"></p>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="host-setup.js"></script>
+</body>
+</html>
